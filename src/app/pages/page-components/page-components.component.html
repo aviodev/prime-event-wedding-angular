@@ -1,0 +1,22 @@
+<div class="container-fluid d-flex flex-column justify-content-center mt-0 min-height">
+    <div class="" style="background-color: #fff3d149;">
+        <div class=" p-2 container mx-auto">
+            <div class="justify-content-between">
+                <h1 class="text-1">{{childPath}} </h1>
+                <div class="breadcrumb-panel">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-li">
+                            <p [routerLink]="['']"><i class="fa-solid fa-house"></i> Home/ </p>
+                        </li>
+                        <li class="breadcrumb-li">
+                            <p [routerLink]="[childPath]">{{childPath}} </p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container p-2">
+        <router-outlet></router-outlet>
+    </div>
+</div>

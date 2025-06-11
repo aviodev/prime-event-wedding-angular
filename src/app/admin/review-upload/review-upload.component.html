@@ -1,0 +1,56 @@
+<div class="container-fluid  ">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="content">
+                <h1 class="text-1 ">Upload Review By Category</h1>
+                <h6 class="text-3">Select Category</h6>
+                <p-dropdown [options]="category" [(ngModel)]="selectedCategory" optionLabel="name"
+                    [style]="{width: '15rem'}">
+                </p-dropdown>
+                <h6 class="text-3 my-4">Upload Reviews</h6>
+                <div class=" color-container justify-content-start p-4 d-flex" style="width: max-content;">
+                    <button class="m-btn-mid" (click)="file.click()"><i class="fas fa-plus"></i> Add image (1280 x 800
+                        px) max-600kb</button>
+                    <input style="display: none;" #file type="file" name="images" accept="image/*"
+                        (change)="onSelect($event)" />
+                </div>
+                <div class=" color-container p-3 w-50" *ngIf="selectedFile">
+                    <div class="container w-100 d-flex justify-content-end align-items-center">
+                        <button class="m-btn-mid " (click)="onRemove()"> remove <i class="pi pi-times-circle"></i>
+                        </button>
+                    </div>
+                    <img style="width:100%; " src="{{selectedFile}}" alt="">
+                </div>
+                <div class="mb-3 my-4 form-input col-sm-6 ">
+                    <label for="name" class="form-label">Rattings</label>
+                    <p-rating class="" [cancel]="false" [stars]="5" [(ngModel)]="stars"></p-rating>
+                </div>
+                <div class="mb-3 form-input col-sm-6 ">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="email" id="name" placeholder="Name" [(ngModel)]="name">
+                </div>
+                <div class="col-sm-12  form-input">
+                    <label for="describe" class="form-label">Review Quotes</label>
+                    <textarea class="" id="describe" rows="8" [(ngModel)]="reviewText"></textarea>
+                </div>
+                <div class=" color-container justify-content-start p-4 d-flex" style="width: max-content;">
+                    <button class="m-btn-mid mx-2" (click)="onUploadForm()"><i
+                            class="fas fa-arrow-up-from-bracket"></i>Upload
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <h1 class="text-1 ">Received feedback from client </h1>
+
+            <div class="box  " *ngFor="let item of allReviews">
+                <p class="text-2">Date: {{item.time | date:'MMM d, y hh:mm a'}}</p>
+                <h5 class="text-2">Name: {{item.name}}</h5>
+                <h5 class="text-2"> Feedback: {{item.feedback}}</h5>
+                <h5 class="text-2">Star : {{item.stars}}</h5>
+            </div>
+            <app-testimonial></app-testimonial>
+        </div>
+    </div>
+
+</div>

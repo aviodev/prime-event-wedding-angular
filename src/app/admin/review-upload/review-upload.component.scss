@@ -1,0 +1,12 @@
+.content {
+  height: 100vh;
+  width: 100%;
+}
+.box {
+  padding: 1rem;
+  border: 2px solid gray;
+  background-color: rgb(59, 46, 7);
+  .text-2 {
+    color: white;
+  }
+}

@@ -1,0 +1,36 @@
+<div class="container-fluid  ">
+    <div class="container p-3 d-flex flex-column align-item-center justify-content-start" style="height: 100vh;">
+        <a href="#" class="logo mx-auto "><img src="../../../assets/marks/logo.png" alt=""></a>
+        <h6 class="text-3 mb-3 mx-auto">
+            <span class="h5" style="color: rgb(255, 0, 85); ">{{reviewForm.name}}</span>
+            Thank you for choosing us as your event partner
+        </h6>
+        <h6 class="text-divider mx-auto">Your feedback</h6>
+
+        <div class=" " *ngIf="!onSuccess">
+            <div class="mb-3  mx-auto form-input col-sm-6 ">
+                <label for="name" class="form-label">Name</label>
+                <input type="email" id="name" placeholder="Name" [(ngModel)]="reviewForm.name">
+            </div>
+            <div class="mb-3 mx-auto col-sm-6  form-input">
+                <label for="describe" class="form-label">Feedback</label>
+                <textarea class="" id="describe" rows="5" [(ngModel)]="reviewForm.feedback"></textarea>
+            </div>
+            <div class="mb-3  mx-auto form-input col-sm-6 ">
+                <label for="name" class="form-label mx-auto">Rattings</label>
+                <p-rating class="mx-auto" [cancel]="false" [stars]="5" [(ngModel)]="reviewForm.stars" style>
+                </p-rating>
+            </div>
+            <div class="d-flex p-3">
+                <button class="m-btn-mid mx-auto" (click)="onSubmit()">Submit</button>
+            </div>
+        </div>
+        <div class="card-success" *ngIf="onSuccess">
+            <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+                <i class="checkmark">✓</i>
+            </div>
+            <h3>Thank You! {{reviewForm.name}}</h3>
+            <p>We received your feedback<br /> </p>
+        </div>
+    </div>
+</div>

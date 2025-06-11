@@ -1,0 +1,139 @@
+<div class="">
+    <p class="text-4"><strong class="h3"> If you are searching for a corporate event planner in Kolkata</strong> then
+        your
+        search ends here
+        with&nbsp;<strong>Prime Event & Wedding</strong>. We are not only the most experienced corporate events
+        managers, but we are a complete management house to support you host the program with all the ingredients and
+        arrangements you need.
+        <br>
+        Our experience and infrastructural support would help you in the entire arrangement, right from the arrangement
+        of
+        the meeting room, sitting arrangement to the arrangement of the red-carpet show, we are having the sensation and
+        expertise in all possible ways.
+        <br>
+        Arranging the sound system to the arrangement of escorting your guests with royal hospitality, we are there to
+        give
+        you the highest level of support in the arrangement of your event. We are also comfortable in arranging the
+        snacks
+        or the grand or gala dinner party for your guests and the board meeting members. Hence, reach us and just
+        narrate
+        the idea you want to establish. And the most important thing is that when we will be arranging it for you, there
+        will be no space for you to listen to anything else than the praise of the event.
+    </p>
+
+    <h5 class="section-title">Event Planner</h5>
+    <h2 class="text-1 ">we facilitate at a premium</h2>
+    <div class="row">
+
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Design & Decor</a>
+                <p class="text-4 my-3">prime events and wedding provide the best decor for all your cooperate events be
+                    it seminars,
+                    Executive Retreats, Incentive
+                    Programs, golf events, Company or organization milestones, or board meetings. We provide on styling
+                    and organizing the
+                    decor according to the event. We customize according to your client's and employee's desires. We aim
+                    at providing
+                    uniqueness to this formal event.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Vendor Management</a>
+                <p class="text-4 my-3">Vendor referrals, attending vendor meetings and coordinating and managing
+                    deliverables right up to overseeing the
+                    execution of vendor services on the event date</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Stage and venue</a>
+                <p class="text-4 my-3">Book prime events and wedding organizers for the best sage and venues. Our venues
+                    are
+                    laid based on the objective of the
+                    meetings. We also provide rental options. The planning requirements for t such events may include
+                    booking, presentation
+                    facilities, break-out refreshments, and registration.</p>
+            </div>
+        </div>
+
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">WIFI AND SOUND SYSTEM</a>
+                <p class="text-4 my-3">Prime events and wedding organizers are well known for providing the best wifi
+                    and sound
+                    systems. We are equipped with quality
+                    speakers, microphones, and wifi network.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Food Service</a>
+                <p class="text-4 my-3">Are you looking for the best food catering for your cooperate event? Prime events
+                    and wedding organizers are is all your need to
+                    book the best quality food and beverages for your clients. We focus on the feel you want to convey
+                    to your employees and
+                    clients and organize accordingly. We provide multiple styles like food buffets, high-end lunches,
+                    breakfast, etc</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">VIDEO AND PHOTOGRAPHY</a>
+                <p class="text-4 my-3">Prime event and wedding organizers provide the best team of professional
+                    photographers to
+                    capture your event. We will click your
+                    memories to last forever.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Security service</a>
+                <p class="text-4 my-3">Safety is our priority. Prime events and wedding organizers always keep security
+                    in check
+                    for a successful event. We keep the
+                    following in mind
+                    Event and Production Equipment.
+                </p>
+                <span class="text-4">
+                    <ol style="list-style-type: circle;">
+                        <li><span>Crowd Management.</span></li>
+                        <li><span>Children Attending or Participating.</span></li>
+                        <li><span>Transport and Traffic Management.</span></li>
+                        <li><span>Staff and Volunteer Safety.</span></li>
+                        <li><span>Medical Assistance Requirements.</span></li>
+                        <li><span>Unpredictable Weather.</span></li>
+                        <li><span>Potential Fire Hazards.</span></li>
+                    </ol>
+                </span>
+
+            </div>
+        </div>
+    </div>
+    <div *ngIf="imageUrls.length">
+        <h5 class="section-title">Our work</h5>
+        <h2 class="text-1 ">Gallery</h2>
+        <div class="row">
+            <div class="col-md-3 mt-md-0" *ngFor="let item of imageUrls">
+                <div class="gallery-img">
+                    <img src="{{item.img_url}}" alt="" srcset="">
+                    <i class="pi pi-search" (click)="onSwitchModal(item.img_url)"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <app-testimonial></app-testimonial>
+    <app-contact-us></app-contact-us>
+    <app-services></app-services>
+</div>
+<p-dialog [(visible)]="modalVisible" [modal]="true" [showHeader]="true" [draggable]="false">
+    <div class="container dialog-container d-flex justify-content-center align-item-center">
+        <div class="close-btn">
+            <i (click)="onSwitchModal('')" class="pi pi-times"></i>
+        </div>
+        <img src={{modalImage}} alt="">
+    </div>
+</p-dialog>

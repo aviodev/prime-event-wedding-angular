@@ -1,0 +1,112 @@
+<div class=" ">
+    <p class="text-4"> <strong class="h3">Getting engaged with your most loved</strong> one is always a special feeling.
+        The team of the company
+        knows what the client
+        wants and has been working tirelessly at creating that perfect experience for them. We assure you that every
+        penny
+        spent on us is worth it.</p>
+    <p class="text-4"> Prime Event & Wedding is a full-service organization that takes care of all
+        things you.
+        need related to weddings. Whether it's a caterer, decoration, lighting, a dance performance, the venue, or
+        even the gifts you can leave all of this to us. For you or your loved one's big day, there are so many
+        actions
+        that are part of the preparations. Indian weddings are generally overwhelming with numerous pre-wedding
+        events. Prime Event & Wedding is one of the trusted wedding event management companies
+        in
+        Mumbai. Let us take care of the nitty-gritty of your wedding arrangements while you celebrate the big day with
+        family and friends.</p>
+    <p><br></p>
+    <h5 class="section-title">Event Planner</h5>
+    <h2 class="text-1 ">What we provide</h2>
+    <div class="row">
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Design & Decor</a>
+                <p class="text-4 my-3">The Indian Engagements are known for the exuberance and lavishness and to make it
+                    more majestic the decorations play a
+                    significant role. The decoration is not all about the ordinary lights and flower decor. It is
+                    something more creative
+                    and impressive component that makes the special occasion memorable and the guests awestruck with the
+                    creative decoration
+                    detailing at the ceremony venue.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link"> Venues & Locations</a>
+                <p class="text-4 my-3">We understand and execute your ideas to give you impeccable engagement or ring
+                    ceremony reception halls, venues as per
+                    specific requirements. Our team understand the facilities of a venue and use their experience to
+                    reinvent and reengineer
+                    to suit your requirements.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Food and Catering</a>
+                <p class="text-4 my-3">While organizing an engagement or ring ceremony event, one of the most crucial
+                    tasks is to arrange the best catering
+                    services in Kolkata. There are many things to keep in mind while selecting from the wedding caterers
+                    in Kolkata. These
+                    caterers offer the most exquisite and outstanding services to their clients.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">DJ and Artist</a>
+                <p class="text-4 my-3">Family DJ has become an important part of every event. Dance you’re your family
+                    makes the bond stronger, all love to
+                    dance and enjoy the music played by the DJ. It is arranged to create a fun-filled atmosphere where
+                    the family members,
+                    relatives, friends as well as invitees can enjoy to the fullest.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Photography</a>
+                <p class="text-4 my-3">Be it a day in monsoon or a sunny day or a chilly night with camp fire it is the
+                    engagement day memories that keeps a
+                    couple evergreen. So, as lovers, partners, friends we also feel the same and would love to make your
+                    moments
+                    come alive through our photography. Most importantly we help to keep you and your family smiling
+                    whenever you look at
+                    the photographs. So, we are not only photographers but the artists who can make your ring ceremony
+                    day
+                    even more beautiful
+                    after your wedding and throughout your life. We are not your hired cameraman but your buddy who
+                    wishes to make your
+                    engagement day a different one from the rest. We feel you as we also love someone and feel in the
+                    same
+                    way about the
+                    special person we love. We can rest assured that you will be hastening to book our services for
+                    your engagement or ring ceremony day once
+                    you see your photographs.</p>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="imageUrls.length">
+        <h5 class="section-title">Our work</h5>
+        <h2 class="text-1 ">Gallery</h2>
+        <div class="row">
+            <div class="col-md-3 mt-md-0" *ngFor="let item of imageUrls">
+                <div class="gallery-img">
+                    <img src="{{item.img_url}}" alt="" srcset="">
+                    <i class="pi pi-search" (click)="onSwitchModal(item.img_url)"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <app-testimonial></app-testimonial>
+    <app-contact-us></app-contact-us>
+    <app-services></app-services>
+</div>
+<p-dialog [(visible)]="modalVisible" [modal]="true" [showHeader]="true" [draggable]="false">
+    <div class="container dialog-container d-flex justify-content-center align-item-center">
+        <div class="close-btn">
+            <i (click)="onSwitchModal('')" class="pi pi-times"></i>
+        </div>
+        <img src={{modalImage}} alt="">
+    </div>
+</p-dialog>

@@ -1,0 +1,127 @@
+<div class="">
+    <p class="text-4"> <strong class="h3">The event of launching the product will</strong> be directly responsible for
+        the level of
+        the instantaneous
+        market that is
+        generated. The product launches are generally event which is organized at bigger levels as the keen target
+        itself is
+        to collect a larger audience. The basic purpose is to give a boost to sales by building consumer awareness. This
+        product launch event can also serve as fruitful in distributing the product, gaining media coverage, or gaining
+        support from the existing influential firms.
+        <br>
+        <strong>Prime Event &amp; Wedding</strong> is undoubtedly the&nbsp;<strong>best event management company in
+            Kolkata</strong> with operations all across the globe. We have expertise in corporate event planning &amp;
+        management of all major events like exhibitions, conventions, client hospitality, client entertainment as such
+        for
+        employees, fundraising, team buildings activities, motivational events, incentives, and many more.
+    </p>
+
+    <h5 class="section-title">Event Planner</h5>
+    <h2 class="text-1 ">We can give more glory</h2>
+    <div class="row">
+
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Design & Decor</a>
+                <p class="text-4 my-3">let prime events and organizers help you to organize your product launch
+                    efficiently. With the help of our resources,
+                    you can plan the best launch party. We plan to attract the best customers who will recall your
+                    brand. Enhance your brand
+                    value. We provide multiple themes at your disposal. Explore best themes.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Vendor Management</a>
+                <p class="text-4 my-3">Vendor referrals, attending vendor meetings and coordinating and managing
+                    deliverables right up to overseeing the
+                    execution of vendor services on the event date</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Stage and venue</a>
+                <p class="text-4 my-3">select the best stages and venue with prime events and organizers. We make sure
+                    people make the event remarkable and
+                    memorable. Rental options are also available. We provide temporary stages for special occasions.
+                    From banquets, two
+                    residential rooms, guest houses.</p>
+            </div>
+        </div>
+
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">WIFI AND SOUND SYSTEM</a>
+                <p class="text-4 my-3">prime video and organizers provide the best sound quality. We have high-end built
+                    speakers best microphones. We provide
+                    the best wifi network for all your events. Book us now.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Food Service</a>
+                <p class="text-4 my-3">You don't have to worry anymore about the prime event and organizers bring you
+                    the best food catering in town. We
+                    provide the best quality food for your event. Plan the most successful product launch and keep your
+                    clients in awe with
+                    our multi-cuisine menu and low prices.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">VIDEO AND PHOTOGRAPHY</a>
+                <p class="text-4 my-3">Prime event organizers guarantees to capture the pictures of your events. You
+                    focus on enjoying your product launch and
+                    let us click these memories.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Security service</a>
+                <p class="text-4 my-3">prime and event organizers provide top-notch security. These include management
+                    security, operational security, and
+                    physical security controls. We keep our client's safety in mind. We provide staff and Volunteer
+                    Safety, transport and
+                    Traffic Management, medical Assistance, fire safety, and unpredictable Weather.
+                </p>
+                <!-- <span class="text-4">
+                    <ol style="list-style-type: circle;">
+                        <li><span>Crowd Management.</span></li>
+                        <li><span>Children Attending or Participating.</span></li>
+                        <li><span>Transport and Traffic Management.</span></li>
+                        <li><span>Staff and Volunteer Safety.</span></li>
+                        <li><span>Medical Assistance Requirements.</span></li>
+                        <li><span>Unpredictable Weather.</span></li>
+                        <li><span>Potential Fire Hazards.</span></li>
+                    </ol>
+                </span> -->
+
+            </div>
+        </div>
+    </div>
+    <div *ngIf="imageUrls.length">
+        <h5 class="section-title">Our work</h5>
+        <h2 class="text-1 ">Gallery</h2>
+        <div class="row">
+            <div class="col-md-3 mt-md-0" *ngFor="let item of imageUrls">
+                <div class="gallery-img">
+                    <img src="{{item.img_url}}" alt="" srcset="">
+                    <i class="pi pi-search" (click)="onSwitchModal(item.img_url)"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <app-testimonial></app-testimonial>
+    <app-contact-us></app-contact-us>
+    <app-services></app-services>
+</div>
+<p-dialog [(visible)]="modalVisible" [modal]="true" [showHeader]="true" [draggable]="false">
+    <div class="container dialog-container d-flex justify-content-center align-item-center">
+        <div class="close-btn">
+            <i (click)="onSwitchModal('')" class="pi pi-times"></i>
+        </div>
+        <img src={{modalImage}} alt="">
+    </div>
+</p-dialog>

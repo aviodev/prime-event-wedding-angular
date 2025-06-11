@@ -1,0 +1,122 @@
+<div class=" ">
+    <p class="text-4">
+        <strong class="h3">Prime Event and Wedding is the most reputed </strong> Event Planner in India. Our expert
+        Kolkata will
+        help in organizing a themed birthday party in your
+        budget. Whether you’re throwing a surprise birthday party for a cherished loved one or your Prince or Your Lil’l
+        Princess and Might be possible that you’ve been put in charge of hosting your holiday get-together at work,
+        we’ll do our
+        best to make sure you have a stress-free experience. Being one of the <strong>best event planners in
+            Kolkata</strong>, we do our
+        best to
+        plan parties for kids' and adults’ birthday decorations. Being the most conspicuous Birthday decoration planner
+        in
+        Kolkata, we carry an experience of over a decade in the domain. Therefore, you can count on us and make your
+        birthday
+        party an outstanding experience with us. Also, being the best birthday party organizers in Kolkata, we plan
+        everything
+        ranging from selecting and decorating a venue, birthday fun games, catering, to returning gifts, etc.
+    </p>
+    <p><br>
+    </p>
+    <h5 class="section-title">Event Planner</h5>
+    <h2 class="text-1 ">We are one stop solution</h2>
+    <div class="row">
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Decoration</a>
+                <p class="text-4 my-3">Planning birthdays can be quite stressful, Prime events and wedding organizers
+                    are here
+                    to make your dream a reality. We cater
+                    to every detail our clients deem fit. We promise to make your party a huge success. From balloons,
+                    ribbons, to lovely
+                    banners we provide every item with quality. Our team is equipped to organize multiple themes from
+                    fairyland to ninja to
+                    Disneyland d to far way forest, we will adorn your party with the finest decor. Our decor best fits
+                    with any gender and
+                    guess what it's cost-effective. We provide unique and innovative ideas that will keep your guest in
+                    awe.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">SPECIAL CAKES</a>
+                <p class="text-4 my-3">Birthdays are incomplete without yummy delights. Prime events and wedding
+                    organizers
+                    provide the most delicious cake that you
+                    cannot simply get enough of. It's lip-smacking. It's often said 'home is where cake is' we say
+                    'party is where the cake
+                    is. We will add a dash of delight to your food palate with are yummy and unique bakes.
+                </p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Dj And Artist</a>
+                <p class="text-4 my-3">The prime event and wedding provides the best DJ and artists in town. We won't
+                    let
+                    the music
+                    stop with the best Dj Playlists. No one
+                    will go home bored, invite the Artist of your dreams, and get this party rocking. We provide
+                    professional sound systems.
+                    Wireless microphones, Dj booth, and whatnot. What are you waiting for booking us now</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">JOKERS AND STUFF</a>
+                <p class="text-4 my-3">Prime events and wedding organizers will keep your guests entertained with the
+                    best shows
+                    and games. We will surely keep you on
+                    the edge seat laugh with the best comedy shows by the best jokers in town.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Catering and food</a>
+                <p class="text-4 my-3">Prime events and wedding organizers provide the best food caters. We are well
+                    known in
+                    town for providing warm and comforting
+                    food for your special occasions. We provide a multi menu for your to choose from. You can choose the
+                    exact number and
+                    kind of food you want for your party. We promise to provide quality and quantity.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">VIDEO AND PHOTOGRAPHY</a>
+                <p class="text-4 my-3">Prime events and wedding organizers are here to capture the best moments. Let's
+                    reel it.
+                    We create a timeless look coupled with
+                    flawless photos. Live your party through our lens. Our team of best photographers will capture all
+                    the fun and frolic.
+                    We provide the best quality pictures with the best lighting possible
+                    Choose Prime events and preserve your moments forever!</p>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="imageUrls.length">
+        <h5 class="section-title">Our work</h5>
+        <h2 class="text-1 ">Gallery</h2>
+        <div class="row">
+            <div class="col-md-3 mt-md-0" *ngFor="let item of imageUrls">
+                <div class="gallery-img">
+                    <img src="{{item.img_url}}" alt="" srcset="">
+                    <i class="pi pi-search" (click)="onSwitchModal(item.img_url)"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <app-testimonial></app-testimonial>
+    <app-contact-us></app-contact-us>
+    <app-services></app-services>
+</div>
+<p-dialog [(visible)]="modalVisible" [modal]="true" [showHeader]="true" [draggable]="false">
+    <div class="container dialog-container d-flex justify-content-center align-item-center">
+        <div class="close-btn">
+            <i (click)="onSwitchModal('')" class="pi pi-times"></i>
+        </div>
+        <img src={{modalImage}} alt="">
+    </div>
+</p-dialog>

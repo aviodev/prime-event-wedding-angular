@@ -1,0 +1,25 @@
+.box {
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+}
+.display1-none {
+  display: block;
+}
+.display2-none {
+  display: none;
+}
+
+.checked {
+  color: rgb(255, 247, 137);
+}
+@media only screen and(max-width:1000px) {
+  .display1-none {
+    display: none;
+  }
+  .display2-none {
+    display: block;
+  }
+}

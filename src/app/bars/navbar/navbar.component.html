@@ -1,0 +1,90 @@
+<header class="header w-100">
+
+    <a href="#" class="logo"><img src="../../../assets/marks/trademark.png" alt=""></a>
+
+    <nav class="navbar display-none">
+        <div class="m-btn m-btn-nav" [routerLink]="['']">
+            <span>Home</span>
+        </div>
+        <div class="dropdown m-btn-nav">
+            <div class="m-btn m-btn-nav" [routerLink]="['default/services']">
+                <span>Services</span>
+            </div>
+            <div class="dropdown-content">
+                <a [routerLink]="['default/wedding-or-anniversary-event']">Wedding/Anniversary</a>
+                <a [routerLink]="['default/engagement-or-ring-ceremony-event']">Engagement/Ring Ceremony</a>
+                <a [routerLink]="['default/birthday-house-party']">Birthday/House Party</a>
+                <a [routerLink]="['default/school-college-event']">School/College Events</a>
+                <a [routerLink]="['default/corporate-or-office-event']">Corporate/Office Event</a>
+                <a [routerLink]="['default/product-launch-event']">Product launch Event</a>
+            </div>
+        </div>
+
+        <div class="m-btn m-btn-nav" [routerLink]="['default/portfolio']">
+            <span>Gallery</span>
+        </div>
+        <div class="m-btn m-btn-nav" [routerLink]="['default/why-primeevent']">
+            <span>Why Us</span>
+        </div>
+        <div class="m-btn m-btn-nav" [routerLink]="['default/about']">
+            <span>About</span>
+        </div>
+    </nav>
+    <button class=" burger  " id="burger " aria-label="Toggle Navigation" (click)="toggleSidePanel()"
+        [ngClass]="{'open': sidePanel}">
+        <svg viewBox="-50 -40 100 80" width="50" height="40">
+            <defs>
+                <path id="line" fill="none" stroke="currentColor" stroke-width="15" stroke-linecap="round"
+                    d="M -40 0 h 80" />
+            </defs>
+            <g>
+                <g class="translate" transform="translate(0 -30)">
+                    <g class="rotate" transform="rotate(-45)">
+                        <use transform="rotate(45)" href="#line" />
+                    </g>
+                </g>
+
+                <g class="rotate" transform="rotate(45)">
+                    <use transform="rotate(-45)" href="#line" />
+                </g>
+
+                <g class="translate" transform="translate(0 30)">
+                    <g class="rotate" transform="rotate(-45)">
+                        <use transform="rotate(45)" href="#line" />
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </button>
+</header>
+<div class="side-bar d-flex flex-column justify-content-start align-item-center" *ngIf="sidePanel">
+    <nav class="navbar display-block mx-auto ">
+        <div class="m-btn m-btn-nav  " [routerLink]="['']">
+            <span>Home</span>
+        </div>
+        <div class="dropdown m-btn-nav">
+            <div class="m-btn m-btn-nav" [routerLink]="['default/services']">
+                <span>Services</span>
+            </div>
+            <div class="dropdown-content">
+                <a [routerLink]="['default/wedding-or-anniversary-event']">Wedding/Anniversary</a>
+                <a [routerLink]="['default/engagement-or-ring-ceremony-event']">Engagement/Ring ceremony</a>
+                <a [routerLink]="['default/birthday-house-party']">Birthday/House Party</a>
+                <a [routerLink]="['default/school-college-event']">School/College Events</a>
+                <a [routerLink]="['default/corporate-or-office-event']">Corporate/Office Event</a>
+                <a [routerLink]="['default/product-launch-event']">Product launch Event</a>
+            </div>
+        </div>
+
+        <div class="m-btn m-btn-nav" [routerLink]="['default/portfolio']">
+            <span>Gallery</span>
+        </div>
+        <div class="m-btn m-btn-nav" [routerLink]="['default/why-primeevent']">
+            <span>Why Us</span>
+        </div>
+        <div class="m-btn m-btn-nav" [routerLink]="['default/about']">
+            <span>About</span>
+        </div>
+    </nav>
+
+</div>

@@ -1,0 +1,117 @@
+<div class=" ">
+    <p class="text-4">
+        <strong class="h3">College annual fest is the event that students eagerly</strong> wait for whether it can be
+        school or
+        college. Apart from
+        the fun,
+        frolic, and platform that it offers to students to exhibit their talents, the fest is also an acid test of some
+        student's managerial skills, as well as the flexibility in the decision-making of the teachers. <br>
+        <strong>Prime Event & Wedding</strong> is undoubtedly the <strong>best event management company in
+            Kolkata</strong> with operations all across the globe. We have expertise in organizing events like this. We
+        can
+        also organize food or catering as per clients requirements. And the most important thing is that when we
+        will
+        be arranging it for you, there will be no space for you to listen to anything else than the praise of the event.
+        <br>
+        <strong>Prime Event & Wedding organizers</strong> are all equipped to plan the best school or college event. We
+        have the
+        best team to
+        guide
+        you through the requirements of the event keeping decorum in mind.
+    </p>
+    <h5 class="section-title">Event Planner</h5>
+    <h2 class="text-1 ">We know how to handle the crowd</h2>
+    <div class="row">
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Decor, stage and venue</a>
+                <p class="text-4 my-3">We provide both on-campus and off-campus decor and design setup. We will provide
+                    you with multiple rental options for
+                    your events. The off-campus design and decor include the hall arrangement, the banquet, table,
+                    linens. For special
+                    events, we also provide temporary stages and mockups. We keep in mind that every occasion is unique
+                    in itself we provide
+                    decor accordingly.
+                </p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Artist</a>
+                <p class="text-4 my-3">prime events and wedding organizers have contacts with artists from various
+                    fields. From
+                    famous writers, journalists, to chefs,
+                    dancers, and singers. We got all artists covered for your event. Book prime events for the best
+                    artists for your events.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Food and
+                    Catering</a>
+                <p class="text-4 my-3">Prime events and wedding organizers will help you set up the best food stalls for
+                    your
+                    fests. We never compromise on quality. We
+                    provide lip-smacking food keeping the students' safety in check. Order from prime events and
+                    organizers best for all
+                    events. We provide delicious food and beverages. We believe in zero food waste protocol</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">VIDEO AND PHOTOGRAPHY</a>
+                <p class="text-4 my-3">Prime events and wedding organizers withhold the best photography team. Choose us
+                    to help
+                    your capture your event successfully.
+                    Our professional team is known to click the best pictures. We provide the best quality pictures for
+                    all your fests and
+                    occasions.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Security service</a>
+                <p class="text-4 my-3">Safety first. We ensure safety is taken care of in every event we undertake. We
+                    provide general guards, bodyguards,
+                    gatekeepers, crowd control, mobile patrol, and armed guards. We also are equipped with disabled
+                    friendly staff. Any
+                    safety hazard fire we have all under control.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">WIFI AND SOUND SYSTEM</a>
+                <p class="text-4 my-3">Prime events and wedding organizers facilitate the best and most professional
+                    sound and
+                    wifi systems. We are renowned for our
+                    quality sound pieces of equipment and the best wifi networks.</p>
+            </div>
+        </div>
+
+    </div>
+    <div *ngIf="imageUrls.length">
+        <h5 class="section-title">Our work</h5>
+        <h2 class="text-1 ">Gallery</h2>
+        <div class="row">
+            <div class="col-md-3 mt-md-0" *ngFor="let item of imageUrls">
+                <div class="gallery-img">
+                    <img src="{{item.img_url}}" alt="" srcset="">
+                    <i class="pi pi-search" (click)="onSwitchModal(item.img_url)"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <app-testimonial></app-testimonial>
+    <app-contact-us></app-contact-us>
+    <app-services></app-services>
+</div>
+<p-dialog [(visible)]="modalVisible" [modal]="true" [showHeader]="true" [draggable]="false">
+    <div class="container dialog-container d-flex justify-content-center align-item-center">
+        <div class="close-btn">
+            <i (click)="onSwitchModal('')" class="pi pi-times"></i>
+        </div>
+        <img src={{modalImage}} alt="">
+    </div>
+</p-dialog>

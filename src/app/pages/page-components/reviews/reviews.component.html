@@ -1,0 +1,86 @@
+<div class="text-start">
+    <h5 class="section-title">Reviews</h5>
+    <h2 class="text-1 ">Recent client reviews</h2>
+    <!-- <p class="text-4 w-50 mx-auto">The interest for Candid Pre-Wedding Photography Service is high these days, since it is a pattern as well as it catches the lady of the hour and husband to be's valuable minutes before their marriage</p> -->
+</div>
+
+
+
+<section class="reivew display1-none" id="review">
+    <div class="review-slider swiper-container">
+        <div class="swiper-wrapper">
+            <swiper #swiperVirtualRef [slidesPerView]="3" [spaceBetween]="20" [pagination]="{ type: 'fraction' }"
+                [virtual]="true" slideActiveClass="swiper-active" [centeredSlides]="false" [navigation]="false"
+                class="mySwiper" id="mySwiperID">
+                <ng-template swiperSlide *ngFor="let slide of [0,1,2,3]; index as i">
+                    <div class="container color-container p-3 mb-5 ">
+                        <!-- <i class="fas fa-quote-right"></i> -->
+                        <div class="box d-flex ">
+                            <img src="../../../../assets//images/15578715_374658706201539_4749534526831843473_n.jpg"
+                                alt="">
+                            <div class="mx-3">
+                                <h3 class="text-3   my-2">john deo</h3>
+                                <span class="text-3">{{today | date:'MMM d, y'}}</span>
+                                <div class="d-flex my-1">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <p class="text-quotes my-2 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Corporis
+                            dolor
+                            dicta cum. Eos
+                            beatae
+                            eligendi,
+                            magni
+                            numquam nemo sed ut corrupti, ipsam iure nisi unde et assumenda perspiciatis
+                            voluptatibus
+                            nihil.</p>
+                    </div>
+                </ng-template>
+            </swiper>
+        </div>
+    </div>
+</section>
+<section class="reivew display2-none" id="review">
+    <div class="review-slider swiper-container">
+        <div class="swiper-wrapper">
+            <swiper #swiperVirtualRef [slidesPerView]="3" [spaceBetween]="20" [pagination]="{ type: 'fraction' }"
+                [virtual]="true" slideActiveClass="swiper-active" [centeredSlides]="false" [navigation]="false"
+                class="mySwiper" id="mySwiperID">
+                <ng-template swiperSlide *ngFor="let slide of [0,1,2,3]; index as i">
+                    <div class="container color-container p-3 mb-5 ">
+                        <!-- <i class="fas fa-quote-right"></i> -->
+                        <div class="box d-flex ">
+                            <img src="../../../../assets//images/15578715_374658706201539_4749534526831843473_n.jpg"
+                                alt="">
+                            <div class="mx-3">
+                                <h3 class="text-3   my-2">john deo</h3>
+                                <span class="text-3">{{today | date:'MMM d, y'}}</span>
+                                <div class="d-flex my-1">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <p class="text-quotes my-2 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Corporis
+                            dolor
+                            dicta cum. Eos
+                            beatae
+                            eligendi,
+                            magni
+                            numquam nemo sed ut corrupti, ipsam iure nisi unde et assumenda perspiciatis
+                            voluptatibus
+                            nihil.</p>
+                    </div>
+                </ng-template>
+            </swiper>
+        </div>
+    </div>
+</section>

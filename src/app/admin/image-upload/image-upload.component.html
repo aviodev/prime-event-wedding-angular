@@ -1,0 +1,27 @@
+<div class="container d-flex justify-content-center align-item-center ">
+
+    <div class="content">
+        <h1 class="text-1 ">Upload Image By Category</h1>
+        <h3 class="text-3">Select Category</h3>
+        <p-dropdown [options]="category" [(ngModel)]="selectedCategory" optionLabel="name" [style]="{width: '15rem'}">
+        </p-dropdown>
+        <h3 class="text-3 my-4">Upload Images</h3>
+        <div class=" color-container justify-content-start p-4 d-flex" style="width: max-content;">
+            <button class="m-btn-mid" (click)="file.click()"><i class="pi pi-plus"></i> Add image (1280 x 800
+                px) max-600kb</button>
+            <input style="display: none;" #file type="file" name="images" accept="image/*" multiple="multiple"
+                (change)="onSelect($event)" />
+            <button class="m-btn-mid mx-2" (click)="onUploadImages()"><i class="pi pi-upload"></i>Upload All</button>
+        </div>
+        <div class="row mx-auto" *ngIf="selectedFiles.length">
+            <div class="col-sm-4 color-container p-3" *ngFor="let item of selectedFiles; let i = index ">
+                <div class="container w-100 d-flex justify-content-end align-items-center">
+                    <button class="m-btn-mid " (click)="onRemove(i)"> remove <i class="pi pi-times-circle"></i>
+                    </button>
+                </div>
+                <img style="width:100%; " src="{{item}}" alt="">
+            </div>
+
+        </div>
+    </div>
+</div>

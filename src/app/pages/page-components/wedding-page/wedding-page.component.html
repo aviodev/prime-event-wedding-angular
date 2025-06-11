@@ -1,0 +1,158 @@
+<div class=" ">
+    <p class="text-4">
+        <strong class="h3">Prime Event & Wedding understand the relevance </strong> of different rituals of a
+        Wedding. We have been
+        in the business
+        of
+        organizing the most extravagant and lovely weddings for year. The team of the company knows what the client
+        wants and
+        has been working tirelessly at creating that perfect experience for them. We assure you that every penny spent
+        on us is
+        worth it.
+        <br>
+        It is a full-service organization that takes care of all things you need related to weddings. Whether it’s a
+        caterer,
+        decoration, lightning, a dance performance, the venue, or even the gifts you can leave all of this to us. We
+        work
+        closely with you & your family to develop a wedding that is uniquely yours, reflecting your personality and
+        individual
+        taste. Whether you wish for a small and intimate affair, a large-scale royal production, or an exotic island
+        wedding, a
+        big fat Bollywood wedding we will make your event special and memorable and most importantly your-day-your-way!
+        <br>
+        We offer our very own professional photography. So, you don’t need to worry about your expenses on hiring one. A
+        wedding
+        take care of by us always brings a smile to the faces of many.
+
+    </p>
+    <h5 class=" section-title">Our Event Planner</h5>
+    <h2 class="text-1 ">We know the value of love</h2>
+    <div class="row">
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">
+                    Decoration</a>
+                <p class="text-4 my-3">Indian weddings are known for their exuberance and lavishness and to make
+                    it
+                    more
+                    majestic the wedding decorations play
+                    a significant role. The wedding decoration is not all about the ordinary lights and flower
+                    decor. It
+                    is something more
+                    creative and impressive component that makes the special occasion memorable and the guests
+                    awestruck
+                    with the creative
+                    decoration detailing at the wedding venue.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link"> Wedding
+                    Venues &
+                    Locations</a>
+                <p class="text-4 my-3">Prime Event & Wedding, one of the best wedding planners in Kolkata is a
+                    pioneer
+                    Wedding Planning company with a team of
+                    experienced professionals who aim at perfection. We understand and execute your ideas to
+                    give you
+                    impeccable wedding
+                    reception halls, venues as per specific requirements. Our team understands the facilities of
+                    a venue
+                    and uses their
+                    experience to reinvent and reengineer to suit your requirements.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link"> Dj</a>
+                <p class="text-4 my-3">Wedding Dj has become an important part of every wedding event. People
+                    love to
+                    dance and enjoy the music played by the
+                    Dj. It is arranged to create a fun-filled atmosphere where the family members, relatives,
+                    friends as
+                    well as the
+                    invitees can enjoy to the fullest.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link"> Food and
+                    Catering</a>
+                <p class="text-4 my-3">While organizing a wedding event, one of the most crucial tasks is to
+                    arrange the
+                    best wedding catering services in Kolkata. There are many things to keep in mind while
+                    selecting
+                    from the wedding caterers in Kolkata. These caterers offer the most exquisite and
+                    outstanding
+                    services to their clients. </p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Wedding Photography</a>
+                <p class="text-4 my-3">Be it a day in monsoon or a sunny day or a chilly night with camp fire it
+                    is the
+                    wedding day memories that keeps a
+                    couple evergreen. So, as lovers, partners, friends we also feel the same and would love to
+                    make your
+                    wedding moments
+                    come alive through our photography. Most importantly we help to keep you and your family
+                    smiling
+                    whenever you look at
+                    the photographs. So, we are not only photographers but the artists who can make your wedding
+                    day
+                    even more beautiful
+                    after your wedding and throughout your life. We are not your hired cameraman but your buddy
+                    who
+                    wishes to make your
+                    wedding day a different one from the rest. We feel you as we also love someone and feel in
+                    the same
+                    way about the
+                    special person we love. You can rest assured that you will be hastening to book our services
+                    for
+                    your wedding day once
+                    you see your wedding photography.</p>
+            </div>
+        </div>
+        <div class="text-start col-sm-6">
+            <div class="icon-box">
+                <a href="#" class="text-link" title="text-link">Haldi and Sangeet Ceremony</a>
+                <p class="text-4 my-3">Wedding is considered to be a very important festival in a couple’s life
+                    and is
+                    celebrated lavishly with great pomp and
+                    show. Prime Event & Wedding the modern weddings are given a traditional touch so that it
+                    becomes a
+                    remarkable event in
+                    the lives of the couple as well as the family of the couple. Indian weddings consist of a
+                    number of
+                    events including
+                    mehendi ceremony, ladies sangeet, wedding event and lot more.</p>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <h5 class="section-title">Our work</h5>
+        <h2 class="text-1 ">Gallery</h2>
+        <div class="row">
+            <div class="col-md-3 mt-md-0" *ngFor="let item of imageUrls">
+                <div class="gallery-img">
+                    <img src="{{item.img_url}}" alt="" srcset="">
+                    <i class="pi pi-search" (click)="onSwitchModal(item.img_url)"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <app-testimonial></app-testimonial>
+    <app-contact-us></app-contact-us>
+    <app-services></app-services>
+</div>
+<p-dialog [(visible)]="modalVisible" [modal]="true" [showHeader]="true" [draggable]="false">
+    <div class="container dialog-container d-flex justify-content-center align-item-center">
+        <div class="close-btn">
+            <i (click)="onSwitchModal('')" class="pi pi-times"></i>
+        </div>
+        <img src={{modalImage}} alt="">
+    </div>
+</p-dialog>
